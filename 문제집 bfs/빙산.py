@@ -8,7 +8,7 @@ n, m = map(int,input().split())
 graph= []
 for i in range(n):
     graph.append(list(map(int,input().split())))
-graph2 = copy.deepcopy(graph)
+graph2= [item[:] for item in graph]
 dx = [1,-1,0,0]
 dy = [0,0,-1,1]
 queue = deque([])
@@ -43,12 +43,12 @@ while True:
                 count +=1
                 
 
-    if count < 2:
+    if count == 1:
         for i in range(n):
             for j in range(m):
                 if graph2[i][j] !=0:
                     bing(i,j)
-        graph= copy.deepcopy(graph2)
+        graph= [item[:] for item in graph2]
         result +=1
     elif count ==0:
         print(0)
