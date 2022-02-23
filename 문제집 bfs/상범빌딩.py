@@ -23,7 +23,7 @@ while True:
         for j in range(n):
             for k in range(m):
                 if graph[i][j][k] =='S':
-                    visit[i][j][k] = 1
+                    visit[i][j][k] = 0
                     queue.append([i,j,k])
                     break
     result = 0
