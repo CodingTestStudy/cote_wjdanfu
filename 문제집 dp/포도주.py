@@ -20,9 +20,9 @@ elif n == 3:
     exit(0)
 dp[0] = podo[0]
 dp[1] = podo[0]+podo[1]
-dp[2] = max(podo[0]+podo[1],podo[1]+podo[2],podo[0]+podo[2])
+dp[2] = max(podo[1]+podo[2],podo[0]+podo[2])
 
 for i in range(3,len(podo)):
-    dp[i] = max(podo[i]+podo[i-1]+dp[i-3],podo[i]+dp[i-2])
+    dp[i] = max(podo[i]+podo[i-1]+dp[i-3],podo[i]+dp[i-2],dp[i-1])
 
 print(max(dp))
