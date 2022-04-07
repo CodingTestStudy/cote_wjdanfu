@@ -9,7 +9,6 @@ graph = []
 for i in range(N):
     graph.append(list(map(int,input().split())))
 
-print(graph)
 
 one = 0 
 zero = 0

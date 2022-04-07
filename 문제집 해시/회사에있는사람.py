@@ -9,5 +9,7 @@ dic = defaultdict(str)
 for i in range(n):
     name, state = map(str,input().split())
     dic[name] = state
-for i in dic.values():
-    print(i)
+s = sorted(dic.keys(), reverse=True)
+for i in s:
+    if dic[i]=='enter':
+        print(i)
